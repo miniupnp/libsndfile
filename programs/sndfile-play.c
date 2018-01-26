@@ -63,7 +63,9 @@
 
 #elif (defined (__MACH__) && defined (__APPLE__))
 	#include <AvailabilityMacros.h>
-	#include <Availability.h>
+	#if defined(MAC_OS_X_VERSION_10_5)
+		#include <Availability.h>
+	#endif
 
 #elif HAVE_SNDIO_H
 	#include <sndio.h>
